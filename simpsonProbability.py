@@ -21,7 +21,6 @@ def prob_simpson():
 
     def prob(lamb=lamb, x=x):
         simps = (pow(lamb, x)* math.exp(-(lamb)))/ math.factorial(x)
-        print(simps)
         return simps
 
     if len(sys.argv) == 3:
@@ -35,6 +34,19 @@ def prob_simpson():
             for i in range(x):
                 probability += prob(lamb, i)
 
+        if sign == "<=":
+            for i in range(x+1):
+                probability += prob(lamb, i)
+
+        if sign == ">":
+            for i in range(x+1):
+                probability += prob(lamb, i)
+            probability = 1 - probability
+
+        if sign == ">=":
+            for i in range(x):
+                probability += prob(lamb, i)
+            probability = 1 - probability
 
     print(probability)
 
