@@ -1,9 +1,12 @@
+
 Car Rental Business Needs Statistics and Programming
 
 A chain of car rental locals made a statistical research for each local in a city. They measure the average of clients for every day.
 
 They used the Simpson model for probabilities:
 
+
+(see README.rtfd folder for image)
 
 
 
@@ -13,7 +16,9 @@ Suposse that one of the locals has an average 8 clients per day.
 
 The probability of having 12 clients, one of the goals of the manager, will be:
 
-source: imgur.com
+
+(see README.rtfd folder for image)
+
 
 It is a very low value, almost 5%. It shows that they have to work a lot for this increment.
 
@@ -52,3 +57,4 @@ prob_simpson(8, 12, '>') == 0.888075998981    # or P(12>c)
 prob_simpson(8, 12, '>=') ==  0.936202803263  # or P(12≥c)
 prob_simpson(8, 12, '<') == 0.063797196737    # or P(12<c)
 prob_simpson(8, 12, '<=') == 0.111924001019   # or P(12≤c)
+
